@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maya’s Hub</title>
+<meta name="theme-color" content="#9c6bff">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/icon-192.png">
+</head>
+<body>
+<div id="loadingOverlay"><div class="loading-text"><span class="shimmer">✨ Loading Maya’s Hub ✨</span></div></div>
+<div id="welcomeBanner" class="app-card">🚓 <strong>Welcome Maya — Let’s Get You Dispatcher Ready!</strong> 💪💜</div>
+<div id="welcomeBack" style="position:fixed;left:50%;top:72px;transform:translateX(-50%);opacity:0;transition:opacity .5s;color:#fff;z-index:901;">💜 Welcome back, Maya</div>
+
+<div class="container">
+  <div class="app-card">
+    <h1>Maya’s Dispatcher Hub</h1>
+    <div class="subtitle">Warm, calm, and made with love for your dispatcher journey.</div>
+    <div style="margin-top:12px">
+      <span class="small">Study streak:</span>
+      <strong><span id="streakCount">0</span> day(s)</strong>
+    </div>
+
+    <div class="tabs" style="margin-top:14px">
+      <div class="tab active" data-target="deck1">Basics</div>
+      <div class="tab" data-target="deck2">Radio</div>
+      <div class="tab" data-target="deck3">Geography</div>
+      <div class="tab" data-target="deck4">Legal</div>
+      <div class="tab" data-target="deck5">Scenarios</div>
+      <div class="tab" data-target="deck6">Exam</div>
+    </div>
+
+    <div id="deck1" class="panel active">
+      <p>Start here to build your foundation: call flow, priorities, and calm control.</p>
+      <p><a class="btn btn-accent" href="assets/Dispatcher_Deck1_Basics_and_Call_Flow.pdf" target="_blank">Open Deck 1 (PDF)</a></p>
+    </div>
+    <div id="deck2" class="panel">
+      <p>Radio procedures, phonetics, and 10-codes—clear, short, and safe.</p>
+      <p><a class="btn btn-accent" href="assets/Dispatcher_Deck2_Radio_Procedures_and_10_Codes.pdf" target="_blank">Open Deck 2 (PDF)</a></p>
+    </div>
+    <div id="deck3" class="panel">
+      <p>Know your map: borders, highways, landmarks, and mile markers.</p>
+      <p><a class="btn btn-accent" href="assets/Dispatcher_Deck3_Geography_and_Jurisdiction.pdf" target="_blank">Open Deck 3 (PDF)</a></p>
+    </div>
+    <div id="deck4" class="panel">
+      <p>Document clearly, log times, and protect sensitive data.</p>
+      <p><a class="btn btn-accent" href="assets/Dispatcher_Deck4_Legal_and_Documentation.pdf" target="_blank">Open Deck 4 (PDF)</a></p>
+    </div>
+    <div id="deck5" class="panel">
+      <p>Practice makes calm: domestic, MVC, in-progress calls, and missing persons.</p>
+      <p><a class="btn btn-accent" href="assets/Dispatcher_Deck5_Practice_Scenarios.pdf" target="_blank">Open Deck 5 (PDF)</a></p>
+    </div>
+    <div id="deck6" class="panel">
+      <p>Sharpen your test mindset: eliminate, verify, breathe, answer.</p>
+      <p><a class="btn btn-accent" href="assets/Dispatcher_Deck6_Exam_Review.pdf" target="_blank">Open Deck 6 (PDF)</a></p>
+    </div>
+
+    <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap">
+      <button class="btn btn-outline" id="openReflection">🌙 Reflection</button>
+      <a class="btn" href="#" onclick="markStudiedToday();return false;">Mark study minute</a>
+      <a class="btn" href="#" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});return false;">Scroll bottom</a>
+    </div>
+
+    <p class="small" style="margin-top:12px;">Tip: Add this to your Home Screen for 1‑tap study. It works offline after the first load.</p>
+  </div>
+
+  <footer>💜 Built just for you, Maya. Keep going — tiny reps count.</footer>
+</div>
+
+<div id="reflectionModal"><div class="modal-card">
+  <div id="reflectionText" class="quote">…</div>
+  <div style="text-align:right;margin-top:14px"><button class="btn" id="closeReflection">Close</button></div>
+</div></div>
+
+<svg id="heart" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#b88cff" d="M12 21s-6.716-4.058-9.192-7.2C1.058 12.068 1 9.5 3.2 7.8c1.4-1.06 3.4-.88 4.8.36C9.4 6.92 11.4 6.74 12.8 7.8c2.2 1.7 2.142 4.268.392 6C18.716 16.942 12 21 12 21z"/>
+</svg>
+<button id="backToTop">Back to Top</button>
+<script src="js/app.js"></script>
+</body></html>
